@@ -1,0 +1,41 @@
+<html>
+<script src="js/Cheddar.js">
+</script>
+<script src="js/Stats.js"></script>
+<head>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+	<title>Cheddar Test</title>
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+</head>
+<body background="background.jpg">	
+<script>
+function init() {
+
+	var W = 550
+	var H = 400
+
+	Cheddar.init({
+		width :W,
+		height:H,
+		clear :true,
+		renderCanvas:true
+	});
+	
+	Cheddar.updateRate = 45;
+	Cheddar.frameRate  = 45;
+	
+	var stage = Cheddar.stage;
+	var mouse = Cheddar.mouse;
+	
+	var animation = stage.addChild(new Sprite("assets/berry/Berry", 729));
+	//animation.x = -animation.width / 2
+	//animation.y = -animation.height / 2
+	animation.x = W/2
+	animation.y = H/2
+	animation.frameRate = 60
+	
+}
+window.onload = init;
+</script>
+</body>
+</html>
